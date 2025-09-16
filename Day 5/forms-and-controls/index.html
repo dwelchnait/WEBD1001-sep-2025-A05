@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+        <title>Form and Controls</title>
+         <meta name="author" content="Don Welch">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Contact Us Form</h1>
+            <p><i>learning html the easy way ...</i></p>
+        </header>
+        <main>
+            <p>This is an example of a html form. It will demonstrate some of
+                the basic form elements such as input, select, textarea,fieldset,
+                legend and submit button.
+
+            </p>
+            <!--Warning
+                It appears the Go Live does not nicel play with form submission
+                It appears that we will need to execute the form submission
+                    by starting the web page from our File Explorer by 
+                    double clicking the index file-->
+            
+            <!-- all form element will appear between these two tags-->
+            <!-- action: indicates the page to send the form for processing
+                        can stay on same page by using the # symbol-->
+            <!-- method: dictates on the send the entered data
+                get: data will be display in text on your url
+                    sent as a name/value pair eg: idname=thedatavalue
+                post: data will be encapsulated with the page itself and
+                    not be display on your url-->
+            
+            <form action="success.html" method="post" name="contact">
+                <fieldset>
+                    <!-- the fieldset group the include form controls
+                         used around a related set of controls
+                         you can have multiple fieldsets on one form
+                         why: this is a semantic tag-->
+                    <legend>Your Information</legend>
+                    <!--
+                        control sets are usually done in pairs label/control
+                        the pair are linked together using the for/id attributes
+                        again used by browser assisted software
+                    -->  
+                    <label for="name">Name:</label>
+                    <!--
+                            on the input tag there are several attributes that can
+                            be used to style and affect presentation
+                            placeholder : prompt to the user, NOT actual input
+                            width: to adjust the size of the control
+                            height: to adjust the size of the control
+                        -->
+                    <input id="name" type="text"  
+                        placeholder="enter name">  
+                    <label for="email">Email:</label>
+                    <input id="email" type="email">  
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" type="number"> 
+                </fieldset>
+                <!-- textarea
+                    this is similar to the input type text.
+                    it differs as this is used for large text input such as the body
+                       of an email
+                    this control can be sized using the attributes rows and columns (cols)
+                      -->
+                <fieldset>
+                    <legend>Leave us a message</legend>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" 
+                        rows="10" cols="80"></textarea>
+                </fieldset>
+                    <!--
+                        some input controls can be logically group together to act as
+                        as single overall control. The prime example of this is the
+                        radiobutton control. The radiobutton control allows a single
+                        selection from a group of input controls.
+
+                        NOTE: the name on each input control MUST be the same for the
+                              radio button group
+                    -->
+                <fieldset>
+                    <legend>How would you like to be contacted?</legend>
+                    <label for="reply-email">Email</label>
+                    <!-- name attribute will have the same text for each input control
+                         value attribute is the compute value associated with the
+                                radio button and will be used by the compute program-->
+                    <input type="radio" id="reply-email" name="reply" value="1">
+                     <label for="reply-text">Text</label>
+                     <input type="radio" id="reply-text" name="reply" value="2">
+                      <label for="reply-phone">Phone Number</label>
+                     <input type="radio" id="reply-phone" name="reply" value="3">
+                </fieldset>
+
+                 <!--
+                        The select control will allow the display of a list of choices
+                                for the user to select from.
+                        Each choice in the select control is indicated by a option set
+                             of tags
+                        The option tag has two components: hidden - which is the selected value
+                                                           visible - which the user reads to
+                                                                     make their choice
+                    -->
+                <fieldset>
+                    <legend>Country</legend>
+                    <label for="country">Select your country</label>
+                    <select id="country" name="country">
+                        <!-- the first choice of a select control
+                                is the default
+                             often this selection is a prompt
+                             -->
+                        <option value="">... select ...</option>
+                        <option value="AU">Australia</option>
+                        <option value="CA">Canada</option>
+                        <option value="CH">China</option>
+                        <option value="JP">Japan</option>
+                        <option value="NZ">New Zealand</option>
+                    </select>
+                </fieldset>
+
+                
+                <!--
+                    this input control will submit the form for processing to 
+                        the action location indicated on the form tag
+                    the value attributes holds the text to be display on the button
+                -->
+                <input type="submit" name="SendMessage" id="SendMessage"
+                        value="Send Message">
+                
+            </form>
+
+        </main>
+        <footer>
+            <br><br>
+            <p>&copy; copyright by Don Welch for educational purposes</p>
+        </footer>
+    </body>
+</html>
