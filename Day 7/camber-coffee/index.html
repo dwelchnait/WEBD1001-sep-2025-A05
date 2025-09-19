@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+        <title>Browser tab text</title>
+         <meta name="author" content="Don Welch">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <!-- All content inside the body is now grouped into landmark elements - header content, 
+                        main content, or footer content -->
+
+        <header>
+            <!-- Note: The single h1 heading can go either inside the header or the main. 
+              If it’s inside the header, it titles the header, which in turn titles the body element. 
+              Also: company logos, navigational areas, tagline (byline), general introductory paragraph-->
+            <img src="img/camber-coffee-outlet.jpg" alt="camber outlet"
+                    width="60" height="60">
+            <h1>Camber Coffee</h1>
+            <p><i>... your daily treat to yourself</i></p>
+
+            <!-- The nav element represents a section of a page that links to other pages or to 
+               parts within the page: a section with navigation links. This element tells the screen 
+               reader that these are the main navigation links throughout the website. -->
+            <nav>
+                <ul>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Hours</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>  
+            <p>Camber Coffee are solely owned operations which use sustainable and ethical
+                proactises for their products. </p> 
+        </header>
+        <main>
+            <!-- This landmark area is your central context for the web page. It will be sectioned using section, aside and
+                    article tags-->
+
+            <!--  
+             Elements no longer sit alone directly inside the main. Everything should be grouped. 
+             Easy way to find the sections? Look for headings, and then group it with the content that 
+             belongs to that heading. Sections are expected to have some type of header tag. This will
+             become part of your web page outline.-->
+            <section>
+                <h2>Featured Drinks</h2>
+                <ul>
+                    <li>Espresso</li>
+                    <li>Americano</li>
+                    <li>Cortado</li>
+                    <li>Cappuccino</li>
+                    <li>Flat White</li>
+                    <li>Latte</li>
+                    <li>Seasonal Tea</li>
+                    <li>Just plain coffeee</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Our Story</h2>
+                <p>Embark on a sensory journey with Camber Coffee - where every sip is a symphony of 
+                    flavours and every cup is a mindful pause. Crafted with care, sourced with purpose.</p>
+                <p>Elevate your daily ritual.</p>
+                <a href="#">Read the Story</a>
+            </section>
+            <aside>
+                <!-- An aside is related or secondary content that complements the main content, 
+                        but isn't essential to it. It's not required to contain a heading, but oftentimes 
+                        it naturally has one. An easy way to identify an aside is with 
+                        the phrase: "...and by the way..."-->
+                <h2>Customer Comments</h2>
+                <blockquote>
+                    <p>Camber Coffee is my go-to spot every morning. The staff are always welcoming, 
+                        and the espresso is consistently perfect. I love the cozy atmosphere—it's 
+                        the kind of place where you can actually relax or get work done. Highly recommend 
+                        the seasonal drinks!</p>
+                    <cite>Jordan M, Brookhaven</cite>
+                </blockquote>
+            </aside>
+            <article>
+                 <!-- Articles represent content that can be removed from the website and reproduced elsewhere. 
+               Blog posts & news articles are good examples. An article can stand by itself. It is supporting
+               content to your central main content.-->
+                <h2>Coffee Roasting 101</h2>
+                <img src="img/coffee-bean-stack.avif" alt="coffee bean stacks" width="200" height="100">
+                <p>March 29, 2025</p>
+                <p>Paul sits down in front of Camber's coffee roaster to talk about the factors that influence 
+                    the process of roasting coffee. In Part One, he talks about what contributes to great quality 
+                    at origin and how they impact the way Camber roasts.</p>
+                <a href="#">Continue reading ....</a>
+            </article>
+        </main>
+        <footer>
+            <!-- The footer contains general information and links to areas within your web site such as
+                 contact info, FAQs, site map, social media links, etc.-->
+             <!-- Using sectioning elements inside the footer is optional -->
+            <!-- If there is a natural heading to the group of content, it could be a section. -->
+            <section>
+                <h2>Contact Us by ....</h2>
+                <address>
+                    212 Mapleview Ave<br>
+                    Brookhaven, ON<br>
+                    (555) 613-9021
+                </address>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="img/facebook-icon.svg" alt="facebook icon"> Us on facebook
+                        </a>
+                    </li>
+                     <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="img/instagram-icon.svg" alt="instagram icon"> Us on instagram
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+    </body>
+</html>
