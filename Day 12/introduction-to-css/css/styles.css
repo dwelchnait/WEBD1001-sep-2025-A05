@@ -1,0 +1,47 @@
+/* for this css file, for our course, will always be called: styles.css
+this file will be linked into each html page that requires the styling
+all site styles will be coded within this file 
+
+by using a separate file we are separating "content* from "presentation"/
+
+/* class selector 
+    note the expected proper formatting for your coding (class standards)
+*/
+.special-hightlight {
+    color: #f4ec07; 
+    font-style: italic;
+}
+/* Element selector 
+   uses the html elements as the selector
+
+   you can have individual rules for each element
+   you can code in a short form and list multiple element for a common rule
+   */
+
+   /* 
+   single element
+    every h2 element on the html page will be colored red
+   */
+
+   /*
+    rule structure
+    selector {
+        property: value;  <- declaration
+        property: value;
+        ....
+    }
+   */
+   h2 {
+    color: blue;
+   }
+
+      /* 
+   multiple element
+    every h1, h2 element on the html page will have a colored background
+    and be italic
+   */
+   h1,
+   h2 {
+    background-color: coral;
+    font-style: italic;
+   }
