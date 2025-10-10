@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Practice Site</title>
+
+     <!-- this is an example of embedded (internaL) styles for a Page
+    this requires the style tag within the head area
+    this is not best Practice
+
+    doing embedded styling, unless explicitly asked for, with lose you marks
+
+    you can placed all you styling with the tag area
+    remember if this is global to your entire web site, then you would need
+        to place this code on each page, bad maintenance!!!! 
+        
+    the sample coding on one line is NOT good practice and will also lose
+        you marks-->
+
+    <!-- <style>
+        .special-hightlight {color: #f4ec07; font-style: italic;}
+    </style> -->
+
+    <!-- 
+        to use a css file within your web page, you must link the file
+            using a link tag
+
+        for a css file
+          rel attribute will be stylesheet
+          href attribute will be a relative address to the style sheet
+
+        you can link to external css style sheets in which case you will
+            be using an http: url 
+        common set of style is from a 3rd party called bootstrap (you are NOT to use this
+                site in this course)
+    -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my Practice Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+               
+                <li ><a href="#">About by color name</a></li>
+                <li ><a href="#">About by rgb value</a></li>
+                 <li><a href="#">About by hex code</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Welcome to this page designed for practicing CSS selectors. Try styling this paragraph!</p>
+            
+            <!-- to use a class on an element use the class attribute followed
+                    by the css class rule name -->
+            <p class="special-hightlight">This one has a class of "highlight" — make it stand out!</p>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Easy to read code</li>
+                 <!-- this is an example of inline styling.
+                this is to be avoided in this course.
+                doing inline styling, unless explicitly asked for, with lose you marks -->
+                <li style="color:greenyellow">Various HTML tags by color name</li>
+                <li style="color:rgb(173, 255, 47)">Various HTML tags by rgb value</li>
+                 <li style="color:#ADFF2F">Various HTML tags by hex code</li>
+
+                <li>Good for practicing CSS selectors</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Practice Site</p>
+    </footer>
+</body>
+
+</html>
