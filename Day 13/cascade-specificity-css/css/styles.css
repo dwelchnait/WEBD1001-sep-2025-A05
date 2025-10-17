@@ -1,0 +1,147 @@
+/* A font family on the body element will get inherited down to all the 
+fonts on the page. */
+/* Line height sets the height of lines of text. If the value is unitless (eg px, rem, em) 
+it acts as a multiplier of the font size. */
+/* A line height of at least 1.5 times the font size is the WCAG guideline 
+for accessibility. */
+
+/* Element selectors 
+   aka using  the tag name
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+        /* by using properties of a element tag, you can override the defaults
+        for that element*/
+    font-size: 96px;
+}
+
+p {
+    /* global to all paragraphes wherever they maybe in the web site */
+    color: firebrick;
+}
+
+/* 
+Conflicts
+
+What: when 2 or more rule declarations are refering to the same element AND
+        same property AND have deferent values, this is a conflict
+
+The browser gets confused. Which to use.
+
+Cascade and Specificity come into play
+
+Cascade : when there is a conflict and the weight of the selectors
+             in conflict are the same, then the last rule wins.
+
+Specificity: is the process of weighting the selector
+                individual elements weight 1
+                class elements      weight 10
+                id elements         weight 100 void using for styling
+                !important          weight 1000 void using
+*/
+
+/* A descendant selector will style the h2 inside a section element. 
+This will not style the h2 inside the footer element */
+/* Note the weight of this selector - two element selectors = 2 */
+
+/* rule/property has the greatest weight of next two, weight 3, color is this one 
+  weight = main (1) + section (1) + h2 (1) = 3
+
+  due to descendant selector : the css affects only the h2 within the specified path
+*/
+main section h2 {
+    font-size:32px;
+    color: #bd7851;
+}
+
+/* rule/property has greater weight then last rule, weight 2 
+     due to descendant selector : the css affects all the h2 within the specified path
+     unless overridden by specificity
+*/
+main h2 {
+    color: forestgreen;
+}
+
+/* classes are used to target different elements with the same rules: weight:10*/
+.lightblue {
+    color: lightblue;
+}
+
+/* last rule/property but weight is 1 
+    to globally effect all h2 tags unless high specificities, or descendant type selectors
+*/
+h2 {
+    color:blue;
+}
+
+/*  multiple selectors are NOT descendant selectors
+    multiple selectors are just an short way of combining the same rule/property
+       for deferent selectors in one combined rule
+    multiple selector act as individual selectors
+    multiple selectors are separated by a comma ,
+    */
+
+h1,
+h2 {
+
+    font-style: italic;
+
+}
+
+/* 
+Without a space between the selectors (element and class), this becomes a combination selector. 
+This will style the <li> element WITH the class name. */
+/* The purpose of this is to be more specific and increase the selector weight. */
+
+li {
+    text-transform: uppercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+    color: violet;
+}
+
+li.capitalize{
+    text-transform: capitalize;
+    color: red;
+}
+/* 
+    Pseudo classes
+    will act on certain actions available to specific tags
+    example: anchor tag
+             anchor tag has 4 states link, hover, click, visited
+             hover: when the cursor is located above the anchor on the page
+             visited: after the anchor has been visited
+             link: is not visited yet
+
+    important to also know is that the order of using pseudo classes on specific
+        element may be important
+
+        for anchor the suggested order is
+        link, visited, hover
+    
+*/
+
+a {
+    color:forestgreen;
+}
+
+a:link {
+    color:chartreuse;
+}
+
+a:visited {
+    color: cyan;
+}
+
+a:hover {
+    font-weight: bold;
+    font-size: larger;
+    color: firebrick;
+}
+

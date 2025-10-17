@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Font Properties</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>CSS Font Properties</h1>
+        <p>This page is a practice space for CSS selectors and styling text.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Font Families</h2>
+            <p>To set a different font type on your text, use the font-family property. The browser will only apply a font if it is a web-safe font and is available on the user's computer.</p>
+            <p>If you want all the fonts on a webpage to have the same font type, it's good practice to place this property on the body and it will be inherited by all elements inside the body.</p>
+            <p><a href="https://www.cssfontstack.com/" target="_blank">CSS Font Stack</a> is a good resource for web safe fonts.</p>
+        </section>
+
+        <section>
+            <h2>Font Size</h2>
+            <p>We can set the font size on any element with the font-size property. This property takes values in measurements:</p>
+            <ul>
+                <li>px (pixels)</li>
+                <li>em</li>
+                <li>rem</li>
+                <li>% (percentages)</li>
+            </ul>
+            <p>In this course we will be using pixels as a measurement value.</p>
+            <p>The browser's default font size is 16px, unless it's a heading.</p>
+        </section>
+
+        <article>
+            <h2>Font Style, Font Weight, Text Transform, and Text Decoration </h2>
+            <section>
+                <h3>Font Style</h3>
+                <p>Used for italic text. The property values are:</p>
+                <ul>
+                    <li>normal</li>
+                    <li>italic</li>
+                    <li>oblique</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Font Weight</h3>
+                <p>Sets how bold the text is. This has many possible values, such as:</p>
+                <ul>
+                    <li>normal</li>
+                    <li>bold</li>
+                    <li>A number value from 100 - 900</li>
+                    <li>lighter</li>
+                    <li>bolder</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Text Transform</h3>
+                <p>Transforms the capitalization of your text. Common values are:</p>
+                <ul>
+                    <li>uppercase</li>
+                    <li>lowercase</li>
+                    <li>capitalize</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Text Decoration</h3>
+                <p>Sets (or unsets) lines through or under text. There are also newer text decoration properties such as text-decoration-style and text-decoration-color that can add some interesting effects.</p>
+                <p>For the simple text decoration, you can use values such as:</p>
+                <ul>
+                    <li>none</li>
+                    <li>underline</li>
+                    <li>overline</li>
+                    <li>line-through</li>
+                </ul>
+            </section>
+        </article>
+
+        <section>
+            <h2 class="lightblue">Text Alignment</h2>
+            <p class="capitalize">Controls how text is aligned within its content box. Values are:</p>
+            <ul>
+                <li class="capitalize">left</li>
+                <li>right</li>
+                <li class="capitalize">center</li>
+                <li>justify - which is not recommended, as it can leave large and irregular spaces between words</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <h2 class="lightblue">Review</h2>
+        <ul>
+            <li>Font Families</li>
+            <li>Font Size</li>
+            <li>Font Style, Font Weight, Text Transform, and Text Decoration</li>
+            <li>Text Alignment</li>
+        </ul>
+        <cite><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals" target="_blank">Source: MDN: Text Styling Fundamentals</a></cite>
+    </footer>
+</body>
+
+</html>

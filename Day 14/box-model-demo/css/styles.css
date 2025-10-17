@@ -1,0 +1,91 @@
+/* all css for your web site will be placed in a file named styles.css (class standard) */
+
+/* inheritence: the css property/value is past down to all inner elements */
+body {
+    /* line height which can be inherited 
+        if a property value has no unit sizing measure ( px, rem, em, ...) then the 
+            value is a multiple of the browser default    
+    */
+    line-height: 1.5;
+}
+/* Step 1: Use the universal selector to remove all margins added by the browser 
+            (user agent stylesheet). */
+/* This way we can start off with a clean slate and add our own spacing in. */
+* {
+    /* margin is the area between element boxes
+       margin can be set for top, right, bottom, left sides of a box
+       there are short cuts to coding some css; in the following css
+            property, one is assigning the width of 0px to each
+            side of your box
+
+       if 0 is used as the value for a property, you do not place the unit measure 
+            on the value 
+    */
+    margin: 0;
+    padding: 0;
+}
+
+/* color each element so we can see the box area of the header and main
+   place a margin area on the bottom of each element for separation */
+h1,
+h2,
+p {
+    background-color: #c0c0c0;
+    margin-bottom: 12px;
+}
+
+/* border on the first paragraph
+   border is the outside edge of your element
+   there is short cuts to coding css
+    */
+
+.p1border {
+    /* long way, individual declarations */
+    border-top: 2px;
+    border-right: 2px;
+    border-bottom: 2px;
+    border-left: 2px;
+    border-style: solid;
+    border-color: red;
+
+    /* short cut border is: size style color*/
+    /* border: 2px solid red; */
+}
+
+.p2padding{
+     /* short cut 
+        if your css property allows for short cut you have options
+        for padding and margin, the short cut is based of order of sides: top right bottom left 
+        
+        when you are coding the individual sides, the order of specification DOES NOT matter
+    */
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+
+    /* short cuts */
+    /* all on one line */
+    /* padding: 16px 24px 16px 24px; */
+
+    /* opposite side the same measurement: top/bottom right/left */
+    /* padding: 16px 24px; */
+
+    /* all side the same measurement */
+    /* padding: 20px; */
+}
+
+.p3marginpaddingwidth {
+    width: 400px;
+    margin-left: 24px;
+    border: 5px ridge forestgreen;
+    padding:18px;
+}
+
+.rightmargin{
+    margin-right: 50px;
+}
+
+.leftmargin {
+    margin-left: 25px;
+}
