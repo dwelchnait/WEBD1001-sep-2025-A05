@@ -1,0 +1,172 @@
+body {
+        /* 
+        without a unit of measure, this value is a multiplier 
+        each browser has a default setting for a font-size
+        Chrome is usually 16px;
+        
+        line height = 1.5 * 16 = 24px;*/
+    line-height: 1.5;
+}
+
+* {
+        /* if your value for unit measure is 0, the unit measure is not needed 
+       this is the short cut of top, right, bottom, left*/
+    margin: 0;
+}
+
+/* add a class to center the page on the browser
+   limit the width of the page */
+.inner-container {
+  /*    what is rem unit measure
+    
+        stands for root em
+        relative unit of measure
+        based on the font-size of the html tag if it contains a font-size property
+        by default, each browser has a default font-size
+        
+        how does it work
+
+        it is a multiplier
+        Example if the default font-size for your browser is 16px
+                if you specify a value of 1.5rem
+                item size would be 1.5 * 16px = 24px;
+
+        why use rem
+
+        Consistency - all size scale from one base value (root font size)
+        Accessibility - users who change default browser font size will affect the whole layout properly
+        Easier to maintain - change html {font-size: ....} and the entire site scales
+
+        So, what about em
+
+        is base on the current element's parent
+        */
+        width: 60rem; /* width = 60 * 16 = 960px */
+        margin:  0 auto; /* centering on the bowser screen (horizontally) */
+        background-color: rgb(248,245,245);
+        padding: 1.5rem; /* moving the content away from the edges  */
+}
+
+P {
+    display: inline-block; /* flexibly for flex-box on default block items */
+    width: 10rem; /* changing the max width of a paragraph block to 160px */
+}
+
+/* apply flex-container to Gap section 
+   apply flex
+   apply row
+   apply space-around
+   
+   what is happening?
+   why is all p pushed to right and a big area of +Gap
+   
+   answer: h2 and the three p are flex-items of the container
+   comment out flex-container
+
+    By default, Flexbox tries to fit all items in one line — even if they don’t fit and end up squishing!
+    If shrinking isn’t enough, they will overflow the container (spill out horizontally)   
+ 
+*/
+
+/* .flex-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+ /* create container for gap
+   place class on div around three p
+   apply flex 
+   apply gap
+   play with gap size 3, 20, 10*/
+
+/*
+    controls the space between flex items sides and top/bottom — without needing margins or extra spacing hacks.
+    Adds even spacing between flex items.
+    Does not add space before the first or after the last item
+    Unlike using margins: No need to reset margins on the last item
+                Gap spacing doesn’t collapse or affect nested flex containers
+    row-gap between items on the row
+    column-gap between items on the column
+*/
+.flex-container-gap {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+/* 
+    create container for justify-center
+    place class on div around three p
+    apply flex 
+    apply justify-content
+    play with center, space-around, space-between 
+*/
+
+/* 
+     controls how flex items are aligned horizontally (along the main axis)
+     defines how the extra space is distributed between or around items when they don’t 
+            use all the available space.
+      values: flex-start (default) place side by side starting from the left
+               flex-end  place side by side starting from the right
+               center    center along the main axis
+               space-between space evenly across main axis, no space on edges
+               space-around equal space around all items (half-size space at left and right edges)
+               space-evenly equal space between and around
+*/
+
+.flex-container-justify {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* 
+    create container for align-items
+    apply flex, gap, direction
+    apply align-items
+    play with normal (default), center, start, end 
+*/
+
+/* 
+    This property defines the alignment and distribution of spacing along the
+        cross axis of the container. 
+    By default, all items are stretched to match the height of the tallest item.
+    possible Values: flex-start
+                    flex-end
+                    center
+                    stretch (default)
+                    baseline
+                    start
+                    end
+*/
+.flex-container-align {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: end;
+}
+
+ /* create container for align-items
+   apply flex, gap
+   play with row (default), row-reverse, column and column-reverse
+   play with combination of justify-content and align-items with column
+*/
+
+/* 
+    This property defines the axis of the container. 
+    By default, the container is laid out in a row, with the main axis running
+        from left to right. 
+    However, when the container’s direction is changed to a
+        column, the main axis runs top to bottom.
+    possible values: row (default) main horizontal cross vertical
+                    row-reverse main horizontal cross vertical
+                    column main vertical cross horizontal
+                    column-reverse main vertical cross horizontal
+*/
+.flex-container-direction {
+    display: flex;
+    gap: 5rem;
+    flex-direction: column-reverse;
+    align-items: center;
+}
