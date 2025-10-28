@@ -1,0 +1,87 @@
+/* utilities and containers */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px; /* general font size for Chrome is 16px by default*/
+    /* the html tag itself can set the default font size
+    for your website. The font size set within the html
+    tag can be used by the rem unit of measure. */
+    color: #333446;
+    background-color: #eaefef;
+}
+/* Instead, we'll use a fixed-width container to limit the width of the content.
+Everything directly inside the body element gets wrapped in this container.
+This can also be called a container or a wrapper. */
+
+/* The width does not always have to be 960px. This amount can change depending on 
+the screen size the design is developed for. */
+.fixed-container {
+/* the width limits the horizontal width of the display area */
+max-width: 960px; /*  using the rem unit measure would make this more flexible and scalable */
+
+/*
+    center the display area
+    margin: top/bottom right/left
+    unit measure values of 0 do not need the unit measurement
+    auto will center the container area on the browser
+*/
+margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row; /* this is the default direction of a flex display */
+    gap: 24px;
+}
+
+/* ***************** global typography ***************** */
+/* When styling h1–h6 headings, it is recommended to use element selectors so these 
+styles are applied consistently across the site. */
+
+h1,
+h2 {
+    color: #727e99;
+}
+
+h1 {
+    font-size: 64px;  /*rem: its a multipler default px * multipler = size = 64 = 16 *4 */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 24px;
+    border-bottom: 1px solid #b8cfee;
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+.about-me p {
+    max-width: 468px; /* 468 * 2 = 936 */
+}
+
+.projects p {
+    max-width: 304px; /* 468 * 3 = 936 */
+}
+
+.contact p {
+    max-width: 468px; /* 468 * 2 = 936 */
+    border: 1px solid #b8cfee;
+    padding: 24px 325px 24px 16px;
+}
+
+footer {
+     border-top: 1px solid #b8cfee;
+     padding:24px 0;
+}
+
+a {
+    color: #727e99;
+    font-weight: bold;
+}
+
+a:hover{
+    color:#b8cfee;
+}
