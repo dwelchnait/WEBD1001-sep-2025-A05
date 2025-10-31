@@ -1,0 +1,78 @@
+body {
+    background-color: #F8F4E1;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row; /* this is the default, this line is optional  */
+    flex-wrap: wrap; /* will place any overflow of the row to the next
+                            physical row of the browser page */
+    gap: 16px; /* the gap will physically separate your flex-items */
+}
+/*************** global typography ****************/
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h2,
+p {
+        margin-bottom: 16px;
+}
+
+/*************** header ***************************/
+header {
+    margin: 24px 0; /* top/bottom right/left */
+    border-bottom: 2px solid #74512d;
+}
+
+/***************** general section *******************/
+section {
+    margin-bottom: 36px;
+}
+
+/****************** top 6 dishes **********************/
+.top-dishes section {
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow:5px 5px 3px #ccc;
+
+/* 
+    each of the top dish sections need to be of the same
+        size regardless of the paragraph content size
+
+    to do this we can fix the content width of the paragraph
+    box-model: lm + lb + lp + content + rp + rb + rm
+
+    960 = 3 * (flex-item)
+
+    flex-Item = a box
+
+    lm + lb + lp + content + rp + rb + rm = flex-item
+    0 + 0 + 16 + ? + 16 + 0 + 0 = 960 / 3
+
+    content = roughly 300px 
+
+    if smaller/larger sizes are need , the make adjusts
+*/
+    width: 275px;
+}
+
+/******************* featured recipes ****************/
+.featured .featured-right-col{
+    background-color: white;
+    padding: 16px;
+    /* using the concept of the box-model calculation seen above
+       estimate the width of your column content */
+    width: 420px;
+}
+

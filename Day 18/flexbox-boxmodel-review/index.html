@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Site</title>
+    <meta name="author" content="Don Welch">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Recipe Site</h1>
+            <p>Fresh Ingredients. Honest Cooking. Real Flavour.</p>
+        </header>
+
+        <main>
+            <!--
+                we need to reference the h3 sections of the top 6 dishes without
+                    touching the sections in the other subtopics
+
+                we can attempt to use direct descendant selectors in the css, however,
+                    this does not isolate the sections of top-dishes
+
+                solution: think outside the box
+
+                consider using a class name (unique) to "label" the selected area of
+                    your page
+                you can then use the class name and lower element selectors to isolate
+                    the hmtl elements you wish
+
+                ex: the top 6 dishes were encapsulated under the class name top-dishes
+                    now the sections under top-dishes can be referred to without touching
+                    the other subtopics
+            -->
+            <section class="top-dishes">
+                <h2>My top 6 Dishes</h2>
+                <!-- To lay out all the cards at once, use a flex container that 
+                        wraps onto multiple lines. -->
+                <!-- enscapsulate all the next 6 sections to be affected by a
+                        single flexbox
+                     since the is natural selection to add the flex-container, we
+                        use the div tag to group (enscapsulate) the items (flex-items)
+                        within the desired flex-box-->
+                <div class="flex-container">
+                    <section>
+                        <h3>Easy Butter Chicken</h3>
+                        <p>A simplified version of the Indian classic, featuring tender chicken in a creamy tomato-based sauce with warm spices.</p>
+                        <p>#OnePot</p>
+                    </section>
+                    <section>
+                        <h3>Banana Oat Breakfast Muffins</h3>
+                        <p>Naturally sweetened and made with whole grains, these muffins are perfect for busy mornings or snack time.</p>
+                        <p>#Breakfast</p>
+                    </section>
+                    <section>
+                        <h3>One-Bowl Fudge Brownies</h3>
+                        <p>Dense, chewy, and chocolatey — made in one bowl with pantry staples. No fuss, just pure indulgence.</p>
+                        <p>#Sweets</p>
+                    </section>
+                    <section>
+                        <h3>Mediterranean Chickpea Salad</h3>
+                        <p>A fresh, zesty salad packed with cucumbers, cherry tomatoes, feta, and a lemon-garlic vinaigrette. Perfect as a side or light lunch.</p>
+                        <p>#Healthy</p>
+                    </section>
+                    <section>
+                        <h3>Creamy Garlic Parmesan Pasta</h3>
+                        <p>Rich, cheesy, and ready in under 30 minutes — comfort food at its best with just a few ingredients.</p>
+                        <p>#QuickandEasy</p>
+                    </section>
+                    <section>
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>A creamy Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
+                        <p>#IconicDishes</p>
+                    </section>
+                </div>
+            </section>
+
+            <section class="featured">
+                <h2>Featured Recipe</h2>
+               
+                <section>
+                    <div class="flex-container">
+                        <img src="img/lentil-stew.avif" width="480" height="600" alt="A bowl of hearty lentil stew.">
+                        <div class="featured-right-col">
+                            <!-- With this layout, we would like all of the text (h3, p, and a) to be grouped together as one flex item to place it in one column. -->
+                            <!-- To do this, wrap these items into a single element (div). The div is now the flex item, and the h3, p, and a's are not flex items, but are children of the div. -->
+                            <h3>Hearty Lentil & Vegetable Stew</h3>
+                            <p>#healthy #One Pot</p>
+                            <p>A cozy, nourishing stew made with green lentils, carrots, potatoes, and kale simmered in a rich tomato and herb broth. This one-pot meal is perfect for chilly evenings and even better the next day as leftovers. Packed with plant-based protein and fiber, it's a comforting classic that's both healthy and satisfying. Serve it with crusty bread or over rice for a complete meal.</p> 
+                            <a href="#">Get the Recipe ></a>
+                        </div>
+                    </div>
+                </section>
+               
+            </section>
+
+            <section class="giving">
+                <h2>Giving Back to the Community</h2>
+                <p>We donate 600 homemade meals every single day to the vulnerable.</p>
+                <a href="#">Learn More ></a>
+                <img src="img/food-prep.avif" width="640" height="427" alt="Volunteers prepping food for the food bank.">
+            </section>
+        </main>
+
+        <footer>
+            <cite>ChatGPT. “Create examples of recipe text for cards.” OpenAI, 12 June 2025, chat.openai.com.</cite>
+        </footer>
+    </div>
+</body>
+</html>
