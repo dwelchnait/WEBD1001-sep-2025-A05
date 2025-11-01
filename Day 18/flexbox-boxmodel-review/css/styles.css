@@ -76,3 +76,28 @@ section {
     width: 420px;
 }
 
+/* 
+    Steps  of Given
+
+    practice the same techniques as above
+    difference, instead of using the flex-container,
+        place the flex properties inside the given class itself
+*/
+.giving {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.given-left-col {
+    background-color: white;
+    padding:12px;
+    width: 250px;
+    margin-right: 2rem;
+}
+
+/***************** footer ************************/
+footer {
+    border-top: 2px solid #74512D;
+    padding:2rem 0;
+}
