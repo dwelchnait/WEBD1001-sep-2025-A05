@@ -129,7 +129,23 @@ footer {
             pdf 1.44 : 1
             web 0.12 : 1 newest compression software
     */
-    background-image: url(../img/footer-flower.png); /* place background image */
+    /* there are times you have an image that needs a color filter applied
+            to get the effect you wish
+       To accomplish this task, you can add the linear-gradient( ) attribute
+            to your background-image.
+       linear-gradient(start color, end color)
+       if the color is the same then there is no visible gradient
+       to get the filter intensity, we use the rgba() color notation
+       rgba (reb, green, blue, opacity %) where opacity % is 0 (none) to 1 (full 100%)
+
+       NOTE: you cannot apply a linear-gradient() directly to an <img> tag, 
+                because gradients only work on CSS backgrounds, and <img> uses 
+                its own src image, not a background
+    */ 
+    background-image: linear-gradient(rgba(138,43,226,.6), rgba(138,43,226,.6)), 
+                        url(../img/footer-flower.webp); /* place filtered background image */
+    background-blend-mode: darken; /* to darken the color overlay on the image */
+    
     padding-left: 35px;
     border-radius: 8px;
 
