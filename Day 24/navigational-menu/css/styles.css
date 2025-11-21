@@ -1,0 +1,70 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1a98ee;
+    color: white;
+
+    /* demonstrate that flexing can be done directly on an element selector, that is does not
+            need to be setup in a separate class 
+            
+        this will flex the flex items in header
+            the block element in the header are h1 and ul
+            NOTE: the li items are within the ul and are NOT consider flex items at
+                    this level
+    */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* movement along the main axis (horizontal) */
+    align-items: center; /* movement along the cross axis (vertical) */
+
+    /* this attribute prevents the text within an element from wrapping */
+    text-wrap: nowrap;
+}
+
+header ul {
+    /* remove the bullet points */
+    list-style-type: none;
+
+    /* move away from the right edge */
+    margin-right: 27px;
+
+    /* again, using flex directly on the element selector 
+       the flexing within this selector is for the li items within ul
+    */
+    display: flex;
+    flex-direction: row;
+    row-gap:5px;
+    column-gap: 57px;
+    flex-wrap: wrap; /* remember this will stop the crunch of your flex-items */
+    
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: bold;
+    font-family: "Arvo", serif;
+    margin: 16px 100px 16px 27px;
+    padding: 10px 0;
+}
+
+header ul li {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none; /* remove the underline */
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
