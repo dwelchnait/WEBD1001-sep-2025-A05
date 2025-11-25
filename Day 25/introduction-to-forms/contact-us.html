@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Floral | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+              <h1><a href="index.html">Bloom Floral</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="contact-us flex-container">
+                <div class="text-col">
+                    <h2>Contact Us</h2>
+                    <p>We're here to help! Fill out the form or reach us via email or phone. Our customer care team is available to help you get the best experience.</p>
+                    <p>Please allow 24 hours during business hours for a reply. Our business hours are M-F from 9am to 5pm EST.</p>
+                    <address>
+                        <a href="mailto:hello@bloomfloral.com">hello@bloomfloral.com</a><br>
+                        <a href="tel:7805555555">(780) 555-5555</a>
+                    </address>
+                </div>
+                <div class="form-col">
+                     <!--
+                        form tag indicates a grouping of input controls
+                        you can assign an action location for this form when the
+                            submit button is press: attribute action
+                        you can assign how the data is to be passed to the
+                            action location: attribute method
+                        you can assign a name to your form: attribute name
+                        if you need styling on the entire form, you can use a
+                            class on the tag
+                    -->
+                    <form action="contact-us.html" method="post" name="contact-us-form"
+                            class="contact-form-layout">
+                        <div>
+                            <!-- the label for attribute matches up the input id attribute-->
+                            <label for="name">Name</label>
+                            <!-- the type attribute indentifies the type of input control-->
+                            <input type="text" id="name" placeholder="enter your name">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                        </div>
+                          <div>
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <fieldset>
+                            <legend>How should we contact you.</legend>
+                                <div class="flex-container">
+                                    <!-- group this set of radio button to act as a
+                                        single collection
+                                    to group a set of radio button as a collection
+                                        use the name attribute on your control
+                                    all radio buttons with the same name attribute
+                                        value, belong to the same collection
+                                        
+                                    each button needs a unique value associated
+                                        with the control
+                                    use the value attibute to assign the unique 
+                                        value to the button-->
+                                    <div>
+                                        <label for="phone-radio">Phone</label>
+                                        <input id="phone-radio" type="radio"
+                                            name="contact" value="phone">
+                                    </div>
+                                      <div>
+                                        <label for="email-radio">Email</label>
+                                        <input id="email-radio" type="radio"
+                                            name="contact" value="email">
+                                    </div>
+                                    <div>
+                                        <label for="message-radio">Text Message</label>
+                                        <input id="message-radio" type="radio"
+                                            name="contact" value="message">
+                                    </div>
+                                </div>
+                        </fieldset>
+                        <div>
+                            <label for="message-area">Message</label>
+                            <textarea id="message-area" name="message-area">
+
+                            </textarea>
+                        </div>
+                        <div class="unstack">
+                            <!-- the checkbox is a boolean control T/F -->
+                            <input id="checkbox" type="checkbox">
+                            <label for="checkbox">I'd like to receive special offers and updates.</label>
+                           <!-- the span tag is a cousin to the div tag in that it has
+                                    no properties other than to encapsulate a character string
+                                use this if the string is to be treated as inline -->
+                            <p><span>*</span> optional</p>
+                        </div>
+                        <!-- this is your button, it is a submit button
+                             form action responds to the submit button -->
+                        <input type="submit" value="Send Message">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="#"><img src="img/instagram-icon.svg" alt="Click here to go to Bloom Floral's Instagram page."></a></li>
+                <li><a href="#"><img src="img/youtube-icon.svg" alt="Click here to go to Bloom Floral's YouTube page."></a></li>
+                <li><a href="#"><img src="img/facebook-icon.png" alt="Click here to go to Bloom Floral's Facebook page."></a></li>
+                <li><a href="#"><img src="img/tiktok-icon.svg" alt="Click here to go to Bloom Floral's Tiktok page."></a></li>
+            </ul>
+            <p>© 2025 Bloom Floral. This website is for educational purposes only.  All content is fictional and created for learning and demonstration.</p>
+        </footer>
+    </div>
+    <!-- Remember to validate your HTML - https://validator.w3.org/ -->
+    <!-- Double check the formatting. -->
+    <!-- Check the document structure in the outliner tool - https://hoyois.github.io/html5outliner/ -->
+</body>
+</html>

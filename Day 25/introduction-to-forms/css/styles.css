@@ -1,0 +1,180 @@
+/* ***************** utilities & containers ***************** */
+body {
+    font-family: "Outfit", sans-serif;
+    /* font-optical-sizing: auto; */
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    gap: 44px;
+    justify-content: center;
+}
+
+/* ***************** global typography ***************** */
+h1 {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-size: 86px;
+}
+
+h2 {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-size: 57px;
+    margin-bottom: 35px;
+}
+
+h3 {
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+/* ***************** home page content ***************** */
+.banner {
+    background-color: #BBAA92;
+    background-image: url(../img/banner-bg.avif);
+    border-radius: 8px;
+    padding: 35px 35px 138px 35px;
+    margin-bottom: 70px;
+}
+
+.banner h2 {
+    font-family: "Outfit", sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+    width: 340px;
+    margin-bottom: 27px;
+}
+
+.banner a {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    background-color: #FFC800;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: inline-block;
+}
+
+.banner a:hover {
+    background-color: #FFD84C;
+}
+
+.what-we-do {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.what-we-do section {
+    width: 200px;
+}
+
+.what-we-do img {
+    margin-bottom: 16px;
+}
+
+/* ***************** contact page content ***************** */
+.text-col {
+    width:311px;
+}
+
+.text-col p{
+    margin-bottom: 24px;
+}
+
+.form-col {
+    width: 605px;
+}
+
+.contact-form-layout label{
+    /* label tags are inline tags
+       we want to treat them as block tags */
+       display: block;
+}
+
+.contact-form-layout fieldset{
+    display: flex;
+   justify-content: left;
+       
+}
+
+.contact-form-layout fieldset label,
+.contact-form-layout .unstack label{
+    /* label tags are inline tags
+       we want to treat them as block tags */
+       display: inline;
+       
+}
+
+.contact-form-layout span {
+    color:red;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 600px;
+    margin-bottom: 35px;
+    padding: 5px;
+}
+
+
+/* ***************** header *************** */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* main axis: horizontal */
+    align-items: center; /* cross axis: vertical */
+    
+}
+
+header ul {
+    list-style-type: none;
+    display:flex;
+    gap: 20px;
+}
+
+header a{
+    color:black;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* ***************** footer ***************** */
+footer {
+    background-color: #BCBA70;
+    background-image: url(../img/footer-bg.avif);
+    border-radius: 8px;
+    padding: 134px 0 35px 35px;
+    margin-top: 70px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+footer p {
+    width: 423px;
+    /* ** NEW CSS to override the footer margin. */
+    margin-bottom: 0;
+}
+
+/* Double-check the organization and formatting of the CSS document. */
+/* Use the Dev Tools to see the layout and fit. */
