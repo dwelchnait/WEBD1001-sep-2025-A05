@@ -101,20 +101,6 @@ h3 {
        display: block;
 }
 
-.contact-form-layout fieldset{
-    display: flex;
-   justify-content: left;
-       
-}
-
-.contact-form-layout fieldset label,
-.contact-form-layout .unstack label{
-    /* label tags are inline tags
-       we want to treat them as block tags */
-       display: inline;
-       
-}
-
 .contact-form-layout span {
     color:red;
 }
@@ -123,9 +109,85 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-    width: 600px;
-    margin-bottom: 35px;
+    width: 611px;
+    height: 48px;
+    font-size: 18px;
+    margin-bottom: 16px;
     padding: 5px;
+}
+
+.contact-form-layout fieldset{
+    display: flex;
+   justify-content: left;
+       
+}
+
+/* ************ more specific customization of controls *************** */
+
+/* placing the fieldset */
+fieldset
+{
+    border: none;
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+/* 
+    this allows the fieldset contents to be
+    treated differently then the general flex-container
+*/
+.contact-form-layout fieldset{
+   display: flex;
+   justify-content: left;
+}
+
+/* 
+    unstack the fieldset controls 
+    and the checkbox/label controls*/
+.contact-form-layout fieldset label,
+.contact-form-layout .unstack label{
+    /* label tags are inline tags
+       we want to treat them as block tags */
+       display: inline;
+
+}
+
+/* add spacing around the radio button control */
+.contact-form-layout fieldset input {
+    margin-right: 44px;
+    margin-left: 5px;
+}
+
+
+/* 
+    For modern web development, using CSS width and height is the better and more precise method 
+        for sizing a <textarea>. While the HTML cols and rows attributes still work, 
+        they are less flexible and responsive than CSS properties.
+ */
+.contact-form-layout textarea{
+    height: 224px;
+}
+
+/* add spacing around the checkbox control */
+.contact-form-layout input[type="checkbox"] {
+    margin-right: 5px;
+    
+}
+
+/*  *************** button *************** */
+.contact-form-layout input[type="submit"] {
+    width: 611px;
+    height:51px;
+    background-color: #ffc800;
+    border-color: #ffc800;
+    font-size: 18px;
+    font-weight: bold; 
+    margin-top: 48px;
+}
+
+.contact-form-layout input[type="submit"]:hover{
+    border-color: #000;
+    border-width: 5px;
 }
 
 
